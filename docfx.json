@@ -1,16 +1,21 @@
 {
-    "metadata": [{
-        "src": [{
-            "files": [
-                "src/**.csproj"
-            ]
-        }],
-        "dest": "api",
-        "disableGitFeatures": false,
-        "disableDefaultFilter": false
-    }],
+    "metadata": [
+        {
+            "src": [
+                {
+                    "files": [
+                        "src/**.csproj"
+                    ]
+                }
+            ],
+            "dest": "api",
+            "disableGitFeatures": false,
+            "disableDefaultFilter": false
+        }
+    ],
     "build": {
-        "content": [{
+        "content": [
+            {
                 "files": [
                     "api/**.yml",
                     "api/index.md"
@@ -25,20 +30,24 @@
                 ]
             }
         ],
-        "resource": [{
-            "files": [
-                "images/**"
-            ]
-        }],
-        "overwrite": [{
-            "files": [
-                "apidoc/**.md"
-            ],
-            "exclude": [
-                "obj/**",
-                "_site/**"
-            ]
-        }],
+        "resource": [
+            {
+                "files": [
+                    "images/**"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
         "dest": "_site",
         "globalMetadataFiles": [],
         "fileMetadataFiles": [],
