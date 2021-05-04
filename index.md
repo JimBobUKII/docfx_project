@@ -1,4 +1,3 @@
 # Homepage
 
-## Table of Content
-
+## Just a heading!
