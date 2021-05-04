@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: echo $GITHUB_SHA >> ./index.html
+    - run: echo $GITHUB_SHA >> ./index.md
     # ...
     - uses: nikeee/docfx-action@v1.0.0
       name: Build Documentation
