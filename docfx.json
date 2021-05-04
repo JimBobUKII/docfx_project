@@ -49,8 +49,8 @@
         "markdownEngineName": "markdig",
         "noLangKeyword": false,
         "keepFileLink": false,
-        "cleanupCacheHistory": false,
         "disableGitFeatures": false,
+        "cleanupCacheHistory": true,
         "globalMetadata": {
             "_appTitle": "DocFX Test Website",
             "_appFooter": "&#0169; 2021 Jason Rose",
