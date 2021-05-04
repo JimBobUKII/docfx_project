@@ -6,6 +6,7 @@
             ]
         }],
         "dest": "api",
+        "disableGitFeatures": false,
         "disableDefaultFilter": false
     }],
     "build": {
@@ -49,11 +50,14 @@
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": false,
+        "disableGitFeatures": false,
         "globalMetadata": {
             "_appTitle": "DocFX Test Website",
             "_appFooter": "&#0169; 2021 Jason Rose",
             "_enableSearch": true,
+            "_disableContribution": false,
             "_disableAffix": false,
+            "disableGitFeatures": false,
             "disableDefaultFilter": false
         }
     }
