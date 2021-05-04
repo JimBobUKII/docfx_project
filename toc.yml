@@ -1,0 +1,8 @@
+# This is an automatically generated file
+items:
+- name: Documentation
+  href: ~/articles/
+  homepage: ~/articles/index.md
+
+- name: Support
+  href: ~/articles/support/index.md
