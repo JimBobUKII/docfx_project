@@ -20,13 +20,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - run: echo $GITHUB_SHA >> public/index.html
     # ...
     - uses: nikeee/docfx-action@v1.0.0
       name: Build Documentation
       with:
         args: docfx.json
     # Publish generated site using GitHub Pages
-    - uses: maxheld83/ghpages@master
+    - uses: maxheld83/ghpages@v0.3.0
       name: Publish Documentation on GitHub Pages
       env:
         BUILD_DIR: _site # docfx's default output directory is _site
