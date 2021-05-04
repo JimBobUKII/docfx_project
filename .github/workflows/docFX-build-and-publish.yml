@@ -22,26 +22,6 @@ jobs:
     - uses: actions/checkout@v1
     - run: echo $GITHUB_SHA >> ./index.md
     # ...
-    -run: set -e
-    -run: set -u
-
-    -run: echo "#################################################"
-    -run: echo "Changing directory to 'BUILD_DIR' $BUILD_DIR ..."
-    -run: cd $BUILD_DIR
-
-    -run: echo "#################################################"
-    -run: echo "Now deploying to GitHub Pages..."
-    -run: REMOTE_REPO="https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" && \
-    -run: REMOTE_REPO="https://${GH_PAT:-"x-access-token:$GITHUB_TOKEN"}@github.com/${GITHUB_REPOSITORY}.git" && \
-    -run: REPONAME="$(echo $GITHUB_REPOSITORY| cut -d'/' -f 2)" && \
-    -run: OWNER="$(echo $GITHUB_REPOSITORY| cut -d'/' -f 1)" && \
-    -run: GHIO="${OWNER}.github.io" && \
-    -run: echo REMOTE_REPO
-    -run: echo REPONAME
-    -run: echo OWNER
-    -run: echo GHIO
-  
-
     - uses: nikeee/docfx-action@v1.0.0
       name: Build Documentation
       with:
