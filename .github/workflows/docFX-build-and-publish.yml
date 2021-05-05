@@ -22,8 +22,8 @@ jobs:
      - name: get-package
        uses: mstksg/get-package@v1
        with:
-        brew: wkhtmltopdf
-        apt-get: wkhtmltopdf
+        brew: cisdem-pdfmanagerultimate
+        apt-get: cisdem-pdfmanagerultimate
         
         
      - name: checkout
