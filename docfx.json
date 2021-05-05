@@ -104,7 +104,7 @@
             }
         ],
         "wkhtmltopdf": {
-          "additionalArguments": "--enable-local-file-access"
+          "additionalArguments": ""
         },
         "name": "Documentation",
         "dest": "_site/documentation/downloads",
