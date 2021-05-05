@@ -20,10 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: sudo apt install -yqq \
-       unzip \
-       wkhtmltopdf \
-       && rm -rf /var/lib/apt/lists/*
+    - run: wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb \
+       sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb
     #- run: echo $GITHUB_SHA >> ./index.md
     # ...
     - uses: nikeee/docfx-action@v1.0.0
