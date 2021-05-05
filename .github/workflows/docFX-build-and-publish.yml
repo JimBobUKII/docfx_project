@@ -18,6 +18,7 @@ jobs:
   DocFX_Build_and_Publish:
     name: Deploy DocX
     runs-on: ubuntu-latest
+    if: apt install -yqq \unzip \wkhtmltopdf \&& rm -rf /var/lib/apt/lists/*
     steps:
     - uses: actions/checkout@v1
     #- run: echo $GITHUB_SHA >> ./index.md
