@@ -31,7 +31,7 @@ jobs:
           repository: wkhtmltopdf/packaging
           path: packaging
    
-   
+     - uses: actions/checkout@v1
    #- run: echo $GITHUB_SHA >> ./index.md
     # ...
      - uses: nikeee/docfx-action@v1.0.0
