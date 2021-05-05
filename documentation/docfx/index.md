@@ -7,7 +7,7 @@ DocFX also has the following cool features:
 - Integration with your source code. You can click "View Source" on an API to navigate to the source code in GitHub (your source code must be pushed to GitHub).
 - Cross-platform support. We have an exe version that runs natively on Windows and with Mono it can also run on Linux and macOS.
 - Integration with Visual Studio. You can seamlessly use DocFX within Visual Studio.
-- Markdown extensions. We introduced DocFX Flavored Markdown(DFM) to help you write API documentation. DFM is 100% compatible with GitHub Flavored Markdown(GFM) with some useful extensions, like file inclusion, code snippet, cross reference, and yaml header. For a detailed description about DFM, please refer to [DFM](~/articles/markdown/flavored_markdown.md).
+- Markdown extensions. We introduced DocFX Flavored Markdown(DFM) to help you write API documentation. DFM is 100% compatible with GitHub Flavored Markdown(GFM) with some useful extensions, like file inclusion, code snippet, cross reference, and yaml header. For a detailed description about DFM, please refer to [DFM](../markdown/flavored_markdown.md).
 
 > [!WARNING]
 > **Prerequisites** [Visual Studio 2019](https://www.visualstudio.com/downloads/) is needed for DocFX metadata msbuild projects. It's not required when generating metadata directly from source code (.cs, .vb) or assemblies (.dll)
