@@ -15,11 +15,13 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  linux:
-    name: Qt 4.8 on Linux
-    runs-on: ubuntulatest
-  
-  
   windows:
-    name: Qt 4.8 on Windows
-    runs-on: windows-2019
+    name: windows-latest
+    runs-on: windows-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Choco help
+        uses: crazy-max/ghaction-chocolatey@v1
