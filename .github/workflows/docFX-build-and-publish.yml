@@ -16,31 +16,24 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   DocFX_Build_and_Publish:
-    name: Deploy DocX
+    name: ubuntu-latest
     runs-on: ubuntu-latest
-    steps:      
-     - name: Deploy DocX
-       uses: actions/checkout@v1
-       
-       
-       
-       
+    steps:
      - name: get-package
        uses: mstksg/get-package@v1
        with:
-        brew: brewdep1
+        brew: wkhtmltopdf
         apt-get: wkhtmltopdf
-       
-       
-       
-       
-       
-       
-       
-    #- run: echo $GITHUB_SHA >> ./index.md
+        
+        
+     - name: checkout
+       uses: actions/checkout@v1
+   
+   
+   #- run: echo $GITHUB_SHA >> ./index.md
     # ...
      - uses: nikeee/docfx-action@v1.0.0
-       name: Build Documentation
+       name: docfx-action
        with:
         args: docfx.json
     # Publish generated site using GitHub Pages
