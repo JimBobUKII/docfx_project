@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: apt install -yqq \
+    - run: sudo apt install -yqq \
        unzip \
        wkhtmltopdf \
        && rm -rf /var/lib/apt/lists/*
