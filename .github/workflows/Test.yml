@@ -24,11 +24,11 @@ jobs:
         uses: actions/checkout@v2
       -
         name: Chocolatey install docfx
-        uses: crazy-max/ghaction-chocolatey@v1
+        uses: crazy-max/ghaction-chocolatey@v1.4.2
         with:
           args: install docfx -y
       -
         name: Chocolatey install wkhtmltopdf
-        uses: crazy-max/ghaction-chocolatey@v1
+        uses: crazy-max/ghaction-chocolatey@v1.4.2
         with:
-          args: choco install wkhtmltopdf -y
+          args: install wkhtmltopdf -y
