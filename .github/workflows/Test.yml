@@ -23,7 +23,7 @@ jobs:
         name: Checkout
         uses: actions/checkout@v2
       -
-        name: Choco help
+        name: Choco install docfx -y
         uses: crazy-max/ghaction-chocolatey@v1
         with:
-          args: -h
+          args: install docfx -y
