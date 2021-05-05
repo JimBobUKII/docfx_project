@@ -19,6 +19,7 @@ jobs:
     name: ubuntu-latest
     runs-on: ubuntu-latest
     steps:
+     - uses: actions/checkout@v1
 
      - name: checkout source
        uses: actions/checkout@v2
@@ -31,7 +32,6 @@ jobs:
           repository: wkhtmltopdf/packaging
           path: packaging
    
-     - uses: actions/checkout@v1
    #- run: echo $GITHUB_SHA >> ./index.md
     # ...
      - uses: nikeee/docfx-action@v1.0.0
