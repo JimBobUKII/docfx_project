@@ -5,5 +5,9 @@ items:
   homepage: documentation/index.md
 
 - name: Support
-  href: documentation/
+  href: documentation/support/
   homepage: documentation/support/index.md
+
+- name: Downloads
+  href: documentation/downloads/
+  homepage: documentation/downloads/index.md

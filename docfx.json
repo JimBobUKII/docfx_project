@@ -69,5 +69,45 @@
             "disableGitFeatures": false,
             "disableDefaultFilter": false
         }
+    },
+    "pdf": {
+        "content": [
+            {
+                "files": [ "pdf/toc.yml" ]
+            },
+            {
+                "files": [
+                    "documentation/**.md",
+                    "documentation/**/toc.yml",
+                    "toc.yml",
+                    "*.md"
+                ],
+                "exclude": [
+                    "**/bin/**",
+                    "**/obj/**",
+                    "pdf/**",
+                    "**/toc.yml",
+                    "**/toc.md",
+                    "documentation/downloads/toc.yml",
+                    "documentation/downloads/index.md"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [ "images/**" ],
+                "exclude": [
+                    "**/bin/**",
+                    "**/obj/**",
+                    "pdf/**"
+                ]
+            }
+        ],
+        "wkhtmltopdf": {
+          "additionalArguments": "--enable-local-file-access"
+        },
+        "name": "Documentation",
+        "dest": "_site/documentation/downloads",
+        "outline": "NoOutline"
     }
 }
