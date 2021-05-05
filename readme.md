@@ -13,3 +13,7 @@
 [![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=workflow_run)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
 
 [![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=check_run)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
+
+[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=deployment)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
+
+[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/Chocolatey-DocFX-Build-and-Publish.yml/badge.svg?event=check_run)](https://github.com/JimBobUKII/docfx_project/actions/workflows/Chocolatey-DocFX-Build-and-Publish.yml)
