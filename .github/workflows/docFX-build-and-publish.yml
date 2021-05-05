@@ -18,9 +18,12 @@ jobs:
   DocFX_Build_and_Publish:
     name: Deploy DocX
     runs-on: ubuntu-latest
-    if: apt install -yqq \unzip \wkhtmltopdf \&& rm -rf /var/lib/apt/lists/*
     steps:
     - uses: actions/checkout@v1
+    - run: apt install -yqq \
+       unzip \
+       wkhtmltopdf \
+       && rm -rf /var/lib/apt/lists/*
     #- run: echo $GITHUB_SHA >> ./index.md
     # ...
     - uses: nikeee/docfx-action@v1.0.0
