@@ -18,19 +18,34 @@ jobs:
   DocFX_Build_and_Publish:
     name: Deploy DocX
     runs-on: ubuntu-latest
-    steps:
-    - run: wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
-       sudo apt install ./wkhtmltox_0.12.6-1.focal_amd64.deb
-    - uses: actions/checkout@v1
+    steps:      
+     - name: Deploy DocX
+       uses: actions/checkout@v1
+       
+       
+       
+       
+     - name: get-package
+       uses: mstksg/get-package@v1
+       with:
+        brew: brewdep1
+        apt-get: wkhtmltopdf
+       
+       
+       
+       
+       
+       
+       
     #- run: echo $GITHUB_SHA >> ./index.md
     # ...
-    - uses: nikeee/docfx-action@v1.0.0
-      name: Build Documentation
-      with:
+     - uses: nikeee/docfx-action@v1.0.0
+       name: Build Documentation
+       with:
         args: docfx.json
     # Publish generated site using GitHub Pages
-    - uses: maxheld83/ghpages@v0.3.0
-      name: Publish Documentation on GitHub Pages
-      env:
+     - uses: maxheld83/ghpages@v0.3.0
+       name: Publish Documentation on GitHub Pages
+       env:
         BUILD_DIR: _site # docfx's default output directory is _site
         GH_PAT: ${{ secrets.GH_PAT }} # See https://github.com/maxheld83/ghpages
