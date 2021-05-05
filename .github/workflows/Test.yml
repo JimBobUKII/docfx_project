@@ -32,3 +32,8 @@ jobs:
         uses: crazy-max/ghaction-chocolatey@v1.4.2
         with:
           args: install wkhtmltopdf -y
+      -
+        name: Build Documentation
+        uses: nikeee/docfx-action@v1.0.0
+        with:
+          args: docfx.json
