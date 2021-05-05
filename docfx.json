@@ -108,6 +108,7 @@
         },
         "name": "Documentation",
         "dest": "_site/documentation/downloads",
+        "noStdin" : true
         "outline": "NoOutline"
     }
 }
