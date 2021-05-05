@@ -1,0 +1,113 @@
+{
+    "metadata": [
+        {
+            "src": [
+                {
+                    "files": [
+                        "src/**.csproj"
+                    ]
+                }
+            ],
+            "dest": "api",
+            "disableGitFeatures": false,
+            "disableDefaultFilter": false
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": [
+                    "api/**.yml",
+                    "api/index.md"
+                ]
+            },
+            {
+                "files": [
+                    "documentation/**.md",
+                    "documentation/**/toc.yml",
+                    "toc.yml",
+                    "*.md"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [
+                    "images/**"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
+            }
+        ],
+        "dest": "_site",
+        "globalMetadataFiles": [],
+        "fileMetadataFiles": [],
+        "template": [
+            "default"
+        ],
+        "postProcessors": [],
+        "markdownEngineName": "markdig",
+        "noLangKeyword": false,
+        "keepFileLink": false,
+        "disableGitFeatures": false,
+        "cleanupCacheHistory": true,
+        "globalMetadata": {
+            "_appTitle": "DocFX Test Website",
+            "_appFooter": "&#0169; 2021 Jason Rose",
+            "_enableSearch": true,
+            "_disableContribution": false,
+            "_disableAffix": false,
+            "disableGitFeatures": false,
+            "disableDefaultFilter": false
+        }
+    },
+    "pdf": {
+        "content": [
+            {
+                "files": [ "pdf/toc.yml" ]
+            },
+            {
+                "files": [
+                    "documentation/**.md",
+                    "documentation/**/toc.yml",
+                    "toc.yml",
+                    "*.md"
+                ],
+                "exclude": [
+                    "**/bin/**",
+                    "**/obj/**",
+                    "pdf/**",
+                    "**/toc.yml",
+                    "**/toc.md",
+                    "documentation/downloads/toc.yml",
+                    "documentation/downloads/index.md"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [ "images/**" ],
+                "exclude": [
+                    "**/bin/**",
+                    "**/obj/**",
+                    "pdf/**"
+                ]
+            }
+        ],
+        "wkhtmltopdf": {
+          "additionalArguments": "--enable-local-file-access"
+        },
+        "name": "Documentation",
+        "dest": "_site/documentation/downloads",
+        "outline": "NoOutline"
+    }
+}
