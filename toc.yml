@@ -1,8 +1,13 @@
 # This is an automatically generated file
 items:
 - name: Documentation
-  href: ~/articles/
-  homepage: ~/articles/index.md
+  href: documentation/
+  homepage: documentation/index.md
 
 - name: Support
-  href: ~/articles/support/index.md
+  href: documentation/support/
+  homepage: documentation/support/index.md
+
+- name: Downloads
+  href: documentation/downloads/
+  homepage: documentation/downloads/index.md
