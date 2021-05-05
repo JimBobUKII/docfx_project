@@ -19,15 +19,17 @@ jobs:
     name: ubuntu-latest
     runs-on: ubuntu-latest
     steps:
-     - name: get-package
-       uses: mstksg/get-package@v1
+
+     - name: checkout source
+       uses: actions/checkout@v2
        with:
-        brew: install
-        apt-get: cisdem-pdfmanagerultimate
-        
-        
-     - name: checkout
-       uses: actions/checkout@v1
+          path: wkhtmltopdf
+          submodules: true
+     - name: checkout packaging
+       uses: actions/checkout@v2
+       with:
+          repository: wkhtmltopdf/packaging
+          path: packaging
    
    
    #- run: echo $GITHUB_SHA >> ./index.md
