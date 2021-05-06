@@ -29,4 +29,3 @@ jobs:
         run: |
           cd "C:\actions-runner\_work\docfx_project\docfx_project"
           docfx docfx.json
-          excho Complete
