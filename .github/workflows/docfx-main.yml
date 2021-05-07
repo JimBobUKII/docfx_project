@@ -45,7 +45,7 @@ jobs:
             Destination = "C:\inestserv\main\"
             Force = $true
             #PassThru = $true
-            #ErrorAction = "SilentlyContinue"
+            ErrorAction = "SilentlyContinue"
             Verbose = $true
             Confirm = $false
           }
@@ -57,6 +57,7 @@ jobs:
             Path = "C:\Backup\main\main\"
             DestinationPath = "C:\Backup\main\$((Get-Date).ToString("dd MM yyyy HH-mm-ss")).zip"
             CompressionLevel = "Fastest"
+            ErrorAction = "SilentlyContinue"
             Force = $true
             Verbose = $true
           }
@@ -66,6 +67,7 @@ jobs:
         run: |
           $RemoveItem = @{
             Path = "C:\Backup\main\main\"
+            ErrorAction = "SilentlyContinue"
             Force = $true
             Verbose = $true
           }
