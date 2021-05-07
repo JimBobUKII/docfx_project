@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Deploy DocFX from main branch to Webserver
+name: Deploy DocFX from staging branch to Webserver
 
 # Controls when the action will run. 
 on:
@@ -30,3 +30,43 @@ jobs:
         run: |
           cd "C:\actions-runner\_work\docfx_project\docfx_project"
           docfx docfx.json
+
+      - name: Move existing website to temp location
+        run: |
+          $iiSFiles = ".config", ".f5config"
+          $websitePath = "C:\inestserv\main\"
+          $tempPath = "C:\Backup\main\main\"
+          Get-ChildItem -Path $websitePath -Recurse | Where-Object {$iiSFiles -notcontains $_.Name} |  Move-Item -Destination $tempPath -Force -Verbose
+
+      - name: Move DocFX site to IIS directory
+        run: |
+          $MoveItems = @{
+            Path = "C:\actions-runner\_work\docfx_project\docfx_project\_site\*"
+            Destination = "C:\inestserv\main\"
+            Force = $true
+            #PassThru = $true
+            #ErrorAction = "SilentlyContinue"
+            Verbose = $true
+            Confirm = $false
+          }
+          Move-Item @MoveItems
+
+      - name: Backup existing website
+        run: |
+          $CompressArchive = @{
+            Path = "C:\Backup\main\main\"
+            DestinationPath = "C:\Backup\main\$((Get-Date).ToString("dd MM yyyy HH-mm-ss")).zip"
+            CompressionLevel = "Fastest"
+            Force = $true
+            Verbose = $true
+          }
+          Compress-Archive @CompressArchive
+
+      - name: Remove temp backup drectory
+        run: |
+          $RemoveItem = @{
+            Path = "C:\Backup\main\main\"
+            Force = $true
+            Verbose = $true
+          }
+          Remove-Item -Recurse @RemoveItem
