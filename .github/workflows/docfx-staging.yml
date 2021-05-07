@@ -29,11 +29,11 @@ jobs:
       - name: Backup existing website
         run: |
           $CompressArchive = @{
-          Path = "C:\inestserv\staging\"
-          DestinationPath = "C:\Backup\staging\$((Get-Date).ToString("dd MM yyyy HH-mm-ss")).zip"
-          CompressionLevel = "Fastest"
-          Force = $true
-          Verbose = $true
+            Path = "C:\inestserv\staging\"
+            DestinationPath = "C:\Backup\staging\$((Get-Date).ToString("dd MM yyyy HH-mm-ss")).zip"
+            CompressionLevel = "Fastest"
+            Force = $true
+            Verbose = $true
           }
           Compress-Archive @CompressArchive
 
@@ -44,5 +44,11 @@ jobs:
 
       - name: Move DocFX site to IIS directory
         run: |
-          cd "C:\actions-runner\_work\docfx_project\docfx_project"
-          docfx docfx.json
+          $MoveItems = @{
+            Path = "C:\actions-runner\_work\docfx_project\docfx_project\_site\*"
+            Destination = "C:\inestserv\staging\"
+            Force = $true
+            #PassThru = $true
+            Verbose = $true
+          }
+          Move-Item @MoveItems
