@@ -26,7 +26,23 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v2
 
+      - name: Backup existing website
+        run: |
+          $CompressArchive = @{
+          Path = "C:\inestserv\staging\"
+          DestinationPath = "C:\Backup\staging\$((Get-Date).ToString("dd MM yyyy HH-mm-ss")).zip"
+          CompressionLevel = "Fastest"
+          Force = $true
+          Verbose = $true
+          }
+          Compress-Archive @CompressArchive
+
       - name: Build site with DocFX
+        run: |
+          cd "C:\actions-runner\_work\docfx_project\docfx_project"
+          docfx docfx.json
+
+      - name: Move DocFX site to IIS directory
         run: |
           cd "C:\actions-runner\_work\docfx_project\docfx_project"
           docfx docfx.json
