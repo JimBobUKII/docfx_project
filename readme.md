@@ -2,26 +2,10 @@
 
 ## Automation Status
 
-### DocFX Build and Publish
+### DocFX Workflow Dispatch
 
-[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?branch=main)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
+docfx-main
+[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docfx-main.yml/badge.svg?event=workflow_dispatch)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docfx-main.yml)
 
-workflow_dispatch
-[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=workflow_dispatch)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
-
-check_run
-[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=check_run)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
-
-### DocFX Build and Publish - Chocolatey
-
-[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/Chocolatey-DocFX-Build-and-Publish.yml/badge.svg?branch=main)](https://github.com/JimBobUKII/docfx_project/actions/workflows/Chocolatey-DocFX-Build-and-Publish.yml)
-
-workflow_run
-[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=workflow_run)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
-
-check_run
-[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=check_run)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
-
-deployment
-[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml/badge.svg?event=deployment)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docFX-build-and-publish.yml)
-
+docfx-staging
+[![DocFX Build and Publish](https://github.com/JimBobUKII/docfx_project/actions/workflows/docfx-staging.yml/badge.svg?branch=main)](https://github.com/JimBobUKII/docfx_project/actions/workflows/docfx-staging.yml)
